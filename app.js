@@ -14,7 +14,7 @@ app.controller('Ctrl', function ($scope) {
   $scope.move = function(e){
   var direction = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
   switch(direction){
-  // balra
+  // left
   	case 1:
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
@@ -38,7 +38,7 @@ app.controller('Ctrl', function ($scope) {
       }
     }
     break;
-    // fel
+    // up
     case 2:
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
@@ -62,7 +62,7 @@ app.controller('Ctrl', function ($scope) {
       }
     }
     break;
-    // jobbra
+    // move the null tile right
     case 3:
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
@@ -86,7 +86,7 @@ app.controller('Ctrl', function ($scope) {
       }
     }
     break;
-    // lefelé
+    // move the null tile down
     case 4:
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
