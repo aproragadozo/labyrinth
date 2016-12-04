@@ -112,4 +112,4 @@ app.controller('Ctrl', function ($scope) {
     break;
   }
     };
-  }
+  });
