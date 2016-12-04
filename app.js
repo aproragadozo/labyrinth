@@ -8,7 +8,7 @@ app.controller('Ctrl', function ($scope) {
   		return(cell.x===a && cell.y===b);
   }
   };
-  $scope.cells=[{'x':0, 'y':0, 'color':'orange', 'id':1}, {'x':0, 'y':1, 'color':'khaki', 'id':2}, {'x':0, 'y':2, 'color':'plum', 'id':3}, {'x':0, 'y':3, 'color':'tomato', 'id':4}, {'x':1, 'y':0, 'color':'magenta', 'id':5}, {'x':1, 'y':1, 'color':'forestgreen', 'id':6}, {'x':1, 'y':2, 'color':'pink', 'id':7}, {'x':1, 'y':3, 'color':'sienna', 'id':8}, {'x':2, 'y':0, 'color':'crimson', 'id':9}, {'x':2, 'y':1, 'color':'silver', 'id':10}, {'x':2, 'y':2, 'color':'chartreuse', 'id':11}, {'x':2, 'y':3, 'color':'orchid', 'id':12}, {'x':3, 'y':0, 'color':'tan', 'id':13}, {'x':3, 'y':1, 'color':'maroon', 'id':14}, {'x':3, 'y':2, 'color':'chocolate', 'id':15}, {'x':3, 'y':3, 'color':'black', 'id':'null'}];
+  $scope.cells=[{'x':0, 'y':0, 'color':'images/01.png', 'id':1}, {'x':0, 'y':1, 'color':'images/02.png', 'id':2}, {'x':0, 'y':2, 'color':'images/03.png', 'id':3}, {'x':0, 'y':3, 'color':'images.04.png', 'id':4}, {'x':1, 'y':0, 'color':'images/05.png', 'id':5}, {'x':1, 'y':1, 'color':'images/06.png', 'id':6}, {'x':1, 'y':2, 'color':'images/07.png', 'id':7}, {'x':1, 'y':3, 'color':'images/08.png', 'id':8}, {'x':2, 'y':0, 'color':'images/09.png', 'id':9}, {'x':2, 'y':1, 'color':'images/10.png', 'id':10}, {'x':2, 'y':2, 'color':'images/11.png', 'id':11}, {'x':2, 'y':3, 'color':'images/12.png', 'id':12}, {'x':3, 'y':0, 'color':'images/13.png', 'id':13}, {'x':3, 'y':1, 'color':'images/14.png', 'id':14}, {'x':3, 'y':2, 'color':'images/15.png', 'id':15}, {'x':3, 'y':3, 'color':'images/null.png', 'id':'null'}];
   
   
   $scope.move = function(e){
