@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Ex Libris Labyrinth - An aproragadozo project</title>
-    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
     <link rel="stylesheet" href="style.css" />
     <script data-require="angular.js@1.5.x" src="https://code.angularjs.org/1.5.8/angular.js" data-semver="1.5.8"></script>
     <script src="app.js"></script>
@@ -13,9 +13,7 @@
   <body>
     <div id="wrapper" ng-controller="Ctrl" ng-click="move()">
   <div id="gomb" ng-repeat="division in divisions | orderBy:['group','sub']">
-    <div class="cell" ng-repeat="cell in cells | filter: match(division.group, division.sub)" style="background: url({{cell.color}});background-size: cover; background-position: center center;">
-      {{ cell.id }}
-    </div>
+    <img class="cell img-responsive" ng-repeat="cell in cells | filter: match(division.group, division.sub)" src={{cell.color}}/>
   </div>
 </div>
   </body>
