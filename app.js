@@ -1,6 +1,6 @@
 var app = angular.module('app', []);
 
-function Ctrl($scope) {
+app.controller('Ctrl', function ($scope) {
   $scope.divisions = [{'group':0,'sub':0}, {'group':0,'sub':1}, {'group':0,'sub':2}, {'group':0,'sub':3}, {'group':1,'sub':0}, {'group':1,'sub':1}, {'group':1,'sub':2}, {'group':1,'sub':3}, {'group':2,'sub':0}, {'group':2,'sub':1}, {'group':2,'sub':2}, {'group':2,'sub':3}, {'group':3,'sub':0}, {'group':3,'sub':1}, {'group':3,'sub':2}, {'group':3,'sub':3}];
   
   $scope.match = function(a, b){
