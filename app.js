@@ -11,8 +11,8 @@ app.controller('Ctrl', function ($scope) {
   $scope.cells=[{'x':0, 'y':0, 'color':'dungeonRealm/01.png', 'id':1}, {'x':0, 'y':1, 'color':'dungeonRealm/02.png', 'id':2}, {'x':0, 'y':2, 'color':'dungeonRealm/03.png', 'id':3}, {'x':0, 'y':3, 'color':'dungeonRealm/04.png', 'id':4}, {'x':1, 'y':0, 'color':'dungeonRealm/05.png', 'id':5}, {'x':1, 'y':1, 'color':'dungeonRealm/06.png', 'id':6}, {'x':1, 'y':2, 'color':'dungeonRealm/07.png', 'id':7}, {'x':1, 'y':3, 'color':'dungeonRealm/08.png', 'id':8}, {'x':2, 'y':0, 'color':'dungeonRealm/09.png', 'id':9}, {'x':2, 'y':1, 'color':'dungeonRealm/10.png', 'id':10}, {'x':2, 'y':2, 'color':'dungeonRealm/null.png', 'id':'null'}, {'x':2, 'y':3, 'color':'dungeonRealm/11.png', 'id':11}, {'x':3, 'y':0, 'color':'dungeonRealm/12.png', 'id':12}, {'x':3, 'y':1, 'color':'dungeonRealm/13.png', 'id':13}, {'x':3, 'y':2, 'color':'dungeonRealm/14.png', 'id':14}, {'x':3, 'y':3, 'color':'dungeonRealm/15.png', 'id':15} ];
   
   
-  $scope.move = function(e){
-    if(e.keyCode === 37) { // balra
+  $scope.move = function($event){
+    if($event.keyCode === 37) { // balra
       for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
@@ -35,7 +35,7 @@ app.controller('Ctrl', function ($scope) {
     }
     }
     // fel
-    if(e.keyCode === 38){
+    if($event.keyCode === 38){
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
@@ -59,7 +59,7 @@ app.controller('Ctrl', function ($scope) {
     }
     }
     // jobbra
-    if(e.keyCode === 39) {
+    if($event.keyCode === 39) {
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
@@ -84,7 +84,7 @@ app.controller('Ctrl', function ($scope) {
     }
     
     // le
-    if(e.keyCode === 40) {
+    if($event.keyCode === 40) {
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
