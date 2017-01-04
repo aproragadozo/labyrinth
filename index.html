@@ -13,7 +13,7 @@
   <body>
     <div id="wrapper" ng-controller="Ctrl" ng-keydown="move($event)">
   <div id="gomb" ng-repeat="division in divisions | orderBy:['group','sub']">
-    <img class="cell img-responsive" ng-repeat="cell in cells | filter: match(division.group, division.sub)" src="{{cell.color}}"/>
+    <img class="cell img-responsive" ng-repeat="cell in cells | filter: match(division.group, division.sub)" style="background:{{ cell.color }}; background-size: cover; background-position: center center;"/>
   </div>
 </div>
   </body>
