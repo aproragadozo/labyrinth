@@ -12,11 +12,8 @@ app.controller('Ctrl', function ($scope) {
   
   
   $scope.move = function(e){
-  var direction = Math.floor(Math.random() * (4 - 1 + 1)) + 1;
-  switch(direction){
-  // balra
-  	case 1:
-    for(var i=0; i<$scope.cells.length; i++) {
+    if(e.keyCode === 37) { // balra
+      for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
         
@@ -32,14 +29,13 @@ app.controller('Ctrl', function ($scope) {
             case 3: $scope.cells[j].y = 2;
             break;
             }
-            
           }
         }
       }
     }
-    break;
+    }
     // fel
-    case 2:
+    if(e.keyCode === 38){
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
@@ -61,9 +57,9 @@ app.controller('Ctrl', function ($scope) {
         }
       }
     }
-    break;
+    }
     // jobbra
-    case 3:
+    if(e.keyCode === 39) {
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
@@ -85,9 +81,10 @@ app.controller('Ctrl', function ($scope) {
         }
       }
     }
-    break;
-    // lefelé
-    case 4:
+    }
+    
+    // le
+    if(e.keyCode === 40) {
     for(var i=0; i<$scope.cells.length; i++) {
     	if($scope.cells[i].id==='null') {
       	var n = $scope.cells[i];
@@ -104,12 +101,10 @@ app.controller('Ctrl', function ($scope) {
             case 3: $scope.cells[j].x = 0;
             break;
             }
-            
           }
         }
       }
     }
-    break;
-  }
+    }
     };
   });
